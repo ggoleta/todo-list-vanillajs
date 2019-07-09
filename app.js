@@ -24,3 +24,14 @@ addForm.addEventListener('submit', evt => {
     }
         
 })
+
+// delete todos -> we use delegate event
+list.addEventListener('click', evt => {
+
+    // check if the class list of the element that we click
+    // contains delete (class)
+    if( evt.target.classList.contains('delete') ) {
+        // navigate to li tag
+        evt.target.parentElement.remove()
+    }
+});
